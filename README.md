@@ -1,6 +1,6 @@
 # picroft 4 Switch Relay skill gpio Readme 
 
-This is a skill for picroft that will interact with the GPIO and 8 Swich Relay
+This is a skill for picroft that will interact with the GPIO and 4 Swich Relay
 
 ## Requirements
 
