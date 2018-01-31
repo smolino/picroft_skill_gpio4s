@@ -60,8 +60,8 @@ Turn Light on
 Turn Light Off
 Turn Fan On
 Turn Fan Off
-Turn Living On
-Turn Living Off
+Turn Bedroom On
+Turn Bedroom Off
 ```
 
 And Picroft respond
@@ -73,8 +73,8 @@ Light is on
 Light is Off
 Fan is On
 Fan is Off
-Living is On
-Living is Off
+Bedroom is On
+Bedroom is Off
 ```
 
 Remember to add mycroft user to gpio group:
