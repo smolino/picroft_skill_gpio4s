@@ -29,20 +29,12 @@ has started.  This is currently only used in testing.
 GPIOS = { "GPIO1":27,
           "GPIO2":17,
           "GPIO3":22,
-          "GPIO4":05,
-          "GPIO5":06,
-          "GPIO6":13,
-          "GPIO7":19,
-          "GPIO8":26 }
+          "GPIO4":05 }
 
 GPIO_STATE = { "GPIO1":"Off",
                "GPIO2":"Off",
                "GPIO3":"Off",
-               "GPIO4":"Off",
-               "GPIO5":"Off",
-               "GPIO6":"Off",
-               "GPIO7":"Off",
-               "GPIO8":"Off" }
+               "GPIO4":"Off" }
 """ This is an object of tracking GPIO"""
 
 GPIO_ON = {}
@@ -194,78 +186,6 @@ if __name__=="__main__":
     set("GPIO4","On")
     blink_active = True
     blink_bedroom()
-    time.sleep(10)
-    blink_active = False
-    if pi_interface:
-        print("GPIO is valid")
-
-    def blink_livingroom():
-        if blink_active:
-            threading.Timer(0.5, blink_livingroom).start()
-        if get("GPIO5")!="Off":
-            set("GPIO5","Off")
-        else:
-            set("GPIO5","On")
-
-    on("GPIO5",printgpio)
-
-    set("GPIO5","On")
-    blink_active = True
-    blink_livingroom()
-    time.sleep(10)
-    blink_active = False
-    if pi_interface:
-        print("GPIO is valid")
-
-    def blink_bathroom():
-        if blink_active:
-            threading.Timer(0.5, blink_bathroom).start()
-        if get("GPIO6")!="Off":
-            set("GPIO6","Off")
-        else:
-            set("GPIO6","On")
-
-    on("GPIO6",printgpio)
-
-    set("GPIO6","On")
-    blink_active = True
-    blink_bathroom()
-    time.sleep(10)
-    blink_active = False
-    if pi_interface:
-        print("GPIO is valid")
-
-    def blink_kitchen():
-        if blink_active:
-            threading.Timer(0.5, blink_kitchen).start()
-        if get("GPIO7")!="Off":
-            set("GPIO7","Off")
-        else:
-            set("GPIO7","On")
-
-    on("GPIO7",printgpio)
-
-    set("GPIO7","On")
-    blink_active = True
-    blink_kitchen()
-    time.sleep(10)
-    blink_active = False
-    if pi_interface:
-        print("GPIO is valid")
-
-    def blink_lamp():
-        if blink_active:
-            threading.Timer(0.5, blink_lamp).start()
-        if get("GPIO8")!="Off":
-            set("GPIO8","Off")
-        else:
-            set("GPIO8","On")
-
-    on("GPIO8",printgpio)
-
-    set("GPIO8","On")
-    blink_active = True
-    blink_lamp()
     time.sleep(10)
     blink_active = False
     if pi_interface:
