@@ -6,25 +6,14 @@ This allows users to control Relay Switch The Relay Switch is Attached to GPIO1
 Example:
     literal blocks::
 
-        Turn Light on
+    Turn Light on
     Turn Light off
-        Turn Switch on
-        Turn switch off
+    Turn Switch on
+    Turn switch off
     Turn fan on
     Turn fan off
     Turn bedroom on
     Turn bedroom off
-    Turn living on
-    Turn living off
-    Turn bathroom on
-    Turn bathroom off
-    Turn kitchen on
-    Turn kitchen off
-    Turn lamp on
-    Turn lamp off
-
-
-
 """
 
 from os.path import dirname, abspath
@@ -58,11 +47,7 @@ class GPIO_ControlSkill(MycroftSkill):
         "SWITCH": {"gpio":"GPIO2", "dialog":"switchblink", "name":"switch"},
         "FAN": {"gpio":"GPIO3", "dialog":"fanblink", "name":"fan"},
         "BEDROOM": {"gpio":"GPIO4", "dialog":"bedroomblink", "name":"bedroom"},
-        "LIVING": {"gpio":"GPIO5", "dialog":"livingroomblink", "name":"livingroom"},
-        "BATHROOM": {"gpio":"GPIO6", "dialog":"bathroomblink", "name":"bathroom"},
-        "KITCHEN": {"gpio":"GPIO7", "dialog":"kitchenblink", "name":"kitchen"},
-        "LAMP": {"gpio":"GPIO8", "dialog":"lampblink", "name":"lamp"},
-    }
+       }
     def getSwitchKey(self, values, gpio):
         for key, val in values.iteritems():
             if val['gpio'] == gpio:
